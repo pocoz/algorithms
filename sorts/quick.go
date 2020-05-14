@@ -4,6 +4,9 @@ func Quick(arr []int) []int {
 	if len(arr) < 2 {
 		return arr
 	}
+	if len(arr) == 2 {
+		return Slow(arr)
+	}
 
 	var (
 		numPivot = len(arr) / 2

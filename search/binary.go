@@ -1,6 +1,6 @@
-package binary_search
+package search
 
-func Search(item int, arr []int) (interface{}, int) {
+func Binary(item int, arr []int) (interface{}, int) {
 	var (
 		low  = 0
 		high = len(arr) - 1
