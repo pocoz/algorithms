@@ -18,7 +18,7 @@ func main() {
 	graph["bob"] = []string{"anuj", "peggy"}
 	graph["alice"] = []string{"peggy"}
 	graph["claire"] = []string{"thom", "jonny"}
-	graph["anuj"] = []string{}
+	graph["anuj"] = []string{"bob"}
 	graph["peggy"] = []string{}
 	graph["thom"] = []string{}
 	graph["jonny"] = []string{}
