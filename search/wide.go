@@ -1,13 +1,13 @@
 package search
 
-var searched = make(map[string]bool)
+var wideSearched = make(map[string]bool)
 
 func Wide(queue []string, graph map[string][]string) string {
 	if len(queue) == 0 {
 		return "not found"
 	}
 	for _, q := range queue {
-		_, ok := searched[q]
+		_, ok := wideSearched[q]
 		if ok {
 			queue = queue[1:]
 			continue
@@ -17,7 +17,7 @@ func Wide(queue []string, graph map[string][]string) string {
 		}
 		queue = queue[1:]
 		queue = append(queue, graph[q]...)
-		searched[q] = true
+		wideSearched[q] = true
 	}
 	return Wide(queue, graph)
 }
